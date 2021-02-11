@@ -1,0 +1,36 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Connection!</title>
+</head>
+
+<body>
+
+	<h1>La liste des candidats</h1>
+	
+	<a th:href="@{/candidat/add}">Ajouter un étudiant!</a>
+	
+	<table>
+	<tr>
+	<th>Nom</th>
+	<th>Prenom</th>
+	</tr>
+	
+	<tr th:each="etudiant : ${etudiants}">
+	<td th:utext="${etudiant.nom}"></td>
+	<td th:utext="${etudiant.prenom}"></td>
+	
+	<td>
+	<a th:href="@{/candidat/{id}(id=${etudiant.id})}"> En détail !</a>
+	<a th:href="@{/candidat/delete/{etudiant}(etudiant=${etudiant.id})}">Supprimer</a>
+	<a th:href="@{/candidat/update/{etudiant}(etudiant=${etudiant.id})}">Modification</a>
+	</td>
+	</tr>
+	</table>
+	
+
+</body>
+</html>

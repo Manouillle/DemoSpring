@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ajout</title>
+</head>
+
+<body>
+	<h1>Ajouter un étudiant!!</h1>
+
+	<form method="post">
+		<div class="form-group">
+			<label for="">Nom de l'étudiant</label> <input type="text"
+				class="form-control" id="nom" name="nom">
+				<!--  <input,th:if="${#fiels.hasErrors('nom')}" th:errors="*{nom}"> -->
+		</div>
+		<div class="form-group">
+			<label for="">Prénom de l'étudiant</label> <input type="text"
+				class="form-control" id="prenom" name="prenom">
+				<!--  <input,th:if="${#fiels.hasErrors('prenom')}" th:errors="*{prenom}"> -->
+		</div>
+		<button th:href="@{/candidat}" type="submit" class="btn btn-primary">Ajouter!</button>
+	</form>
+
+</body>
+</html>

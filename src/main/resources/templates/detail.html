@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Détail</title>
+</head>
+
+<body>
+
+	<h1
+		th:utext="'Le candidat ' +${etudiant.prenom}+' '+${etudiant.nom}+' en détail !' "></h1>
+
+	<h2>Nom :</h2>
+	<h3 th:utext="${etudiant.nom}"></h3>
+
+	<h2>Prénom :</h2>
+	<h3 th:utext="${etudiant.prenom}"></h3>
+
+	<h2>Action :</h2>
+	<h3>
+	<a th:href="@{/candidat/}">Retour !</a>
+	</h3>
+
+
+</body>
+</html>
